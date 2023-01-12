@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnstate/tabbox.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FavoriteWidget(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('My Tapbox Demo'),
+        ),
+        body: const Center(
+          child: TapboxA(),
+        ),
+      ),
     );
   }
 }
